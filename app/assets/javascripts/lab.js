@@ -3,7 +3,7 @@ var attrListUnicorns = ["beastType", "ability", "secondAbility", "pedigree", "el
 
 function calculateGeneSequence() {
 	var beastType = $(".gene-selector#beastType").val();
-	var newSeq = 0;
+	var newSeq = bigInt(0);
 	var attrList = [];
 	if (beastType == 0) {
 		attrList = attrListDinosaurs;
@@ -12,7 +12,7 @@ function calculateGeneSequence() {
 	}
 	for (var i = 0; i < attrList.length; i++) {
 		console.log("Value for "+attrList[i]+" is "+$(".gene-selector#"+attrList[i]).val());
-		newSeq = newSeq * 32 + parseInt($(".gene-selector#"+attrList[i]).val());
+		newSeq = newSeq.times(32).add(bigInt($(".gene-selector#"+attrList[i]).val()));
 	}
 	$(".final_seq").val(newSeq);
 	$("#displayImage").attr("src", "https://image-generator-beta.herokuapp.com/image/"+newSeq);
