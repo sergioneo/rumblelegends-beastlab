@@ -8,12 +8,15 @@ function calculateGeneSequence() {
 	var newSeq = bigInt(0);
 	var attrList = [];
 	var attrLengths = [];
+	var typeString = "";
 	if (beastType == 0) {
 		attrList = attrListDinosaurs;
 		attrLengths = attrLengthDinosaurs;
+		typeString = "dinosaur";
 	} else if (beastType == 1) {
 		attrList = attrListUnicorns;
 		attrLengths = attrLengthUnicorns;
+		typeString = "unicorn";
 	}
 	for (var i = 0; i < attrList.length; i++) {
 		console.log("Value for "+attrList[i]+" is "+$(".gene-selector#"+attrList[i]).val());
@@ -21,7 +24,7 @@ function calculateGeneSequence() {
 		newSeq = newSeq.times(2 ** len).add(bigInt($(".gene-selector#"+attrList[i]).val()));
 	}
 	$(".final_seq").val(newSeq);
-	$("#displayImage").attr("src", "https://image-generator-beta.herokuapp.com/image/"+newSeq);
+	$("#displayImage").attr("src", "https://image-generator-beta.herokuapp.com/"+typeString+"/"+newSeq);
 }
 
 $(function() {
