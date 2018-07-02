@@ -24,7 +24,7 @@ function calculateGeneSequence() {
 		newSeq = newSeq.times(2 ** len).add(bigInt($(".gene-selector#"+attrList[i]).val()));
 	}
 	$(".final_seq").val(newSeq);
-	$("#displayImage").attr("src", "https://image-generator-beta.herokuapp.com/"+typeString+"/"+newSeq);
+	$("#displayImage").attr("src", "https://image-generator-beta.herokuapp.com/"+typeString+"/"+newSeq.toString());
 }
 
 $(function() {
