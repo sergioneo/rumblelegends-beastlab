@@ -1,5 +1,5 @@
-var attrListDinosaurs = ["colorCombination", "beastType", "ability", "secondAbility", "pedigree", "element", "type", "eyes", "nose", "mouth", "tail", "plume", "legs", "spikes", "wings"];
-var attrListUnicorns = ["colorCombination", "beastType", "ability", "secondAbility", "pedigree", "element", "type", "eyes", "horn", "hair", "tail", "snout", "legs"];
+var attrListDinosaurs = ["colorCombination", "beastType", "ability", "secondAbility", "pedigree", "element", "dtype", "eyes", "nose", "mouth", "tail", "plume", "legs", "spikes", "wings"];
+var attrListUnicorns = ["colorCombination", "beastType", "ability", "secondAbility", "pedigree", "element", "utype", "eyes", "horn", "hair", "tail", "snout", "legs"];
 var attrLengthDinosaurs = [6, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
 var attrLengthUnicorns = [6, 2, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5];
 
